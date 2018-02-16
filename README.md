@@ -13,7 +13,7 @@
 * 2 Atualizar a política no bucket de destino para conceder ao CloudTrail permissões entre contas.
 * 3 Ative o CloudTrail nas outras contas.
 
-*PASSOS 1*
+*PASSO 1*
 
 
 1 - Faça login em https://console.aws.amazon.com/cloudtrail/.
@@ -22,16 +22,16 @@
 
 3 - Escolha Get Started Now.
 
-4 - Na página Create Trail, em Trail name, digite um nome para a sua trilha.
+![print01](/prints/01.png)
 
-![print01](/prints/1.png)
+4 - Na página Create Trail, em Trail name, digite um nome para a sua trilha.
 
 6 - Em Apply trail to all regions, escolha YES para receber os arquivos de log de todas as regiões. Essa é a configuração padrão recomendada. Se você escolher NO, a trilha registrará arquivos somente da região em que você a criou.
 
 ![print01.1](/prints/01.1.png)
 
 
-7 - Em Management event, Read/Write events, escolha se você deseja que sua trilha registre All, Read-only, Write-only ou None e, em seguida, escolha Salve. Por padrão, as trilhas registram todos os eventos de gerenciamento.
+7 - Em Management event, Read/Write events, escolha se você deseja que sua trilha registre All, Read-only, Write-only ou None e, em seguida, escolha Create. Por padrão, as trilhas registram todos os eventos de gerenciamento.
 
 ![print01.2](/prints/01.2.png)
 ![print01.3](/prints/01.3.png)
@@ -42,7 +42,7 @@
 
 No console da AWS abra o servico Amazon S3
 
-![print02](/prints/2.png)
+![print02](/prints/02.png)
 
 Escolha o Bucket criado (Neste Exemplo: center-logs-full-accounts), Clique em Permissions depois em  Bucket Police
 
