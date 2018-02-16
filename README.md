@@ -1,6 +1,6 @@
 # Como centralizar os logs do CloudTrail em unica conta 
 
-## O Objetivo é centralizar os logs de todas as contas da AWS em uma unica conta, sendo assim, os LOGs estarao disponiveis em um unico Bucket S3.
+## O objetivo é centralizar os logs de todas as contas da AWS em uma unica conta, sendo assim, os LOGs estarao disponiveis em um unico Bucket S3.
 
 ### **Requesitos:**
 
@@ -44,7 +44,7 @@ No console da AWS abra o servico Amazon S3
 
 ![print02](/prints/02.png)
 
-Escolha o Bucket criado (Neste Exemplo: center-logs-full-accounts), Clique em Permissions depois em  Bucket Police
+Escolha o Bucket criado (neste exemplo: center-logs-full-accounts), Clique em Permissions depois em Bucket Police
 
 ![print02.1](/prints/2.1.png)
 
@@ -83,39 +83,39 @@ Vamos modificar a política existente para adicionar uma linha para cada conta a
   ]
 
 ```
-_Neste exemplo, em ( "Resource": ) foi adicionado a segunda conta:_ 
+> _Neste exemplo, em ( "Resource": ) foi adicionado a segunda conta:_ 
 
 "arn:aws:s3:::center-logs-full-accounts/AWSLogs/222222222222/*", com o numero ficticio da conta "222222222222", a cada nova conta deve-se adicionar uma abaixdo da outra conforme o exemplo acima.
 
 Print de Exemplo:
 
-PRINT 02.3
+![print02.1](/prints/2.2.png)
 
 
 Apos as configuracoes aplicadas, clique em SAVE.
 
-PASSO 3 
+*PASSO 3* 
 
-Neste passo vamos configurar as contas adicionais para enviar logs a conta principal.
+> Neste passo vamos configurar as contas adicionais para enviar logs a conta principal,
+como exemplo vou assumir que o ID da conta adicional é 222222222222.
 
-como exemplo vou assumir que o ID da conta adicional é 222222222222:
 
+1 - Faça login no console de gerenciamento da AWS usando as credenciais da conta 222222222222 e abra o console do AWS CloudTrail. Na barra de navegação, selecione a região em que você deseja ativar o CloudTrail.
 
-Faça login no console de gerenciamento da AWS usando as credenciais da conta 222222222222 e abra o console do AWS CloudTrail. Na barra de navegação, selecione a região em que você deseja ativar o CloudTrail.
+2 - Escolha Get Started Now.
 
-Escolha Get Started Now.
+3- Na página seguinte, digite um nome para a sua trilha na caixa Trail name.
 
-Na página seguinte, digite um nome para a sua trilha na caixa Trail name.
+4 - Em Create a new S3 bucket?, escolha NO. Use a caixa de texto para informar o nome do bucket que você criou anteriormente para o armazenamento de arquivos de log quando fez login usando as credenciais da conta 111111111111. O CloudTrail exibe um aviso perguntando se você tem certeza de que deseja especificar um bucket do S3 em outra conta. Verifique o nome do bucket que você inseriu, ao final da configuracao clique em CREATE.
 
-Em Create a new S3 bucket?, escolha NO. Use a caixa de texto para informar o nome do bucket que você criou anteriormente para o armazenamento de arquivos de log quando fez login usando as credenciais da conta 111111111111. O CloudTrail exibe um aviso perguntando se você tem certeza de que deseja especificar um bucket do S3 em outra conta. Verifique o nome do bucket que você inseriu, ao final da configuracao clique em CREATE.
-
-PRINT 3.0
+![print03](/prints/3.png)
 
 Escolha Advanced.
 
 No campo Log file prefix digite o mesmo prefixo inserido para o armazenamento de arquivos de log ao ativar o CloudTrail usando as credenciais da conta PRINCIPAL. Se você optar por usar um prefixo diferente do informado quando ativou o CloudTrail na primeira conta, será necessário editar a política no seu bucket de destino para permitir que o CloudTrail grave arquivos de log em seu bucket usando esse novo prefixo.
 
-PRINT 3.1
+
+![print3.1](/prints/3.1.png)
 
 
 
