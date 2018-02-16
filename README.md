@@ -40,15 +40,15 @@
 
 > Neste passo vamos atualizar a política no bucket para conceder ao CloudTrail permissões entre contas.
 
-No console da AWS abra o servico Amazon S3
+1 - No console da AWS abra o servico Amazon S3
 
 ![print02](/prints/02.png)
 
-Escolha o Bucket criado (neste exemplo: center-logs-full-accounts), Clique em Permissions depois em Bucket Police
+2 - Escolha o Bucket criado (neste exemplo: center-logs-full-accounts), Clique em Permissions depois em Bucket Police
 
 ![print02.1](/prints/2.1.png)
 
-Vamos modificar a política existente para adicionar uma linha para cada conta adicional cujos arquivos de log devem ser fornecidos a esse bucket. Veja o exemplo de política a seguir e observe a linha Resource onde foi especificando o ID 22222222222 de uma segunda conta.
+3 - Vamos modificar a política existente para adicionar uma linha para cada conta adicional cujos arquivos de log devem ser fornecidos a esse bucket. Veja o exemplo de política a seguir e observe a linha Resource onde foi especificando o ID 22222222222 de uma segunda conta.
 
 ```yaml 
 {
@@ -85,14 +85,17 @@ Vamos modificar a política existente para adicionar uma linha para cada conta a
 ```
 > _Neste exemplo, em ( "Resource": ) foi adicionado a segunda conta:_ 
 
-"arn:aws:s3:::center-logs-full-accounts/AWSLogs/222222222222/*", com o numero ficticio da conta "222222222222", a cada nova conta deve-se adicionar uma abaixdo da outra conforme o exemplo acima.
+```bash
+"arn:aws:s3:::center-logs-full-accounts/AWSLogs/222222222222/*"
+```
+> O numero ficticio da conta utilizado "222222222222", a cada inclusao de nova conta deve-se adicionar ser adicionada uma linha seguindo o exemplo acima.
 
 Print de Exemplo:
 
 ![print02.1](/prints/2.2.png)
 
 
-Apos as configuracoes aplicadas, clique em SAVE.
+4 - Apos as configuracoes aplicadas, clique em SAVE.
 
 *PASSO 3* 
 
@@ -110,7 +113,7 @@ como exemplo vou assumir que o ID da conta adicional é 222222222222.
 
 ![print03](/prints/3.png)
 
-Escolha Advanced.
+5 - Escolha Advanced.
 
 No campo Log file prefix digite o mesmo prefixo inserido para o armazenamento de arquivos de log ao ativar o CloudTrail usando as credenciais da conta PRINCIPAL. Se você optar por usar um prefixo diferente do informado quando ativou o CloudTrail na primeira conta, será necessário editar a política no seu bucket de destino para permitir que o CloudTrail grave arquivos de log em seu bucket usando esse novo prefixo.
 
