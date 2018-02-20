@@ -31,7 +31,8 @@
 ![print01.1](/prints/01.1.png)
 
 
-7 - Em Management event, Read/Write events, escolha se você deseja que sua trilha registre All, Read-only, Write-only ou None e, em seguida, escolha Create. Por padrão, as trilhas registram todos os eventos de gerenciamento.
+Em Management event, Read/Write events, escolha se você deseja que sua trilha registre All, Read-only, Write-only ou None (print acima)
+e, em seguida, escolha Create. Por padrão, as trilhas registram todos os eventos de gerenciamento, conforme o print abaixo.
 
 ![print01.2](/prints/01.2.png)
 ![print01.3](/prints/01.3.png)
