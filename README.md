@@ -121,5 +121,6 @@ No campo Log file prefix digite o mesmo prefixo inserido para o armazenamento de
 
 ![print3.1](/prints/3.1.png)
 
-
+Referencia:
+[Documentacao Oficial AWS](https://docs.aws.amazon.com/pt_br/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)
 
