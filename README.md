@@ -1,4 +1,4 @@
-# Como centralizar os logs do CloudTrail em unica conta 
+# Como centralizar os logs do CloudTrail em uma unica conta 
 
 ## O objetivo é centralizar os logs de todas as contas da AWS em uma unica conta, sendo assim, os LOGs estarao disponiveis em um unico Bucket S3.
 
@@ -110,16 +110,17 @@ como exemplo vou assumir que o ID da conta adicional é 222222222222.
 
 3- Na página seguinte, digite um nome para a sua trilha na caixa Trail name.
 
+![print03](/prints/3.png)
+
 4 - Em Create a new S3 bucket?, escolha NO. Use a caixa de texto para informar o nome do bucket que você criou anteriormente para o armazenamento de arquivos de log quando fez login usando as credenciais da conta PRINCIPAL. O CloudTrail exibe um aviso perguntando se você tem certeza de que deseja especificar um bucket do S3 em outra conta. Verifique o nome do bucket que você inseriu, ao final da configuracao clique em CREATE.
 
-![print03](/prints/3.png)
+![print3.1](/prints/3.1.png)
+
 
 5 - Escolha Advanced.
 
 No campo Log file prefix digite o mesmo prefixo inserido para o armazenamento de arquivos de log ao ativar o CloudTrail usando as credenciais da conta PRINCIPAL. Se você optar por usar um prefixo diferente do informado quando ativou o CloudTrail na primeira conta, será necessário editar a política no seu bucket de destino para permitir que o CloudTrail grave arquivos de log em seu bucket usando esse novo prefixo.
 
-
-![print3.1](/prints/3.1.png)
 
 Referencia:
 [Documentacao Oficial AWS](https://docs.aws.amazon.com/pt_br/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)
