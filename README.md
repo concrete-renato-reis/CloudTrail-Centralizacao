@@ -110,7 +110,7 @@ como exemplo vou assumir que o ID da conta adicional é 222222222222.
 
 3- Na página seguinte, digite um nome para a sua trilha na caixa Trail name.
 
-4 - Em Create a new S3 bucket?, escolha NO. Use a caixa de texto para informar o nome do bucket que você criou anteriormente para o armazenamento de arquivos de log quando fez login usando as credenciais da conta 111111111111. O CloudTrail exibe um aviso perguntando se você tem certeza de que deseja especificar um bucket do S3 em outra conta. Verifique o nome do bucket que você inseriu, ao final da configuracao clique em CREATE.
+4 - Em Create a new S3 bucket?, escolha NO. Use a caixa de texto para informar o nome do bucket que você criou anteriormente para o armazenamento de arquivos de log quando fez login usando as credenciais da conta PRINCIPAL. O CloudTrail exibe um aviso perguntando se você tem certeza de que deseja especificar um bucket do S3 em outra conta. Verifique o nome do bucket que você inseriu, ao final da configuracao clique em CREATE.
 
 ![print03](/prints/3.png)
 
