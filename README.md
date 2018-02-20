@@ -11,7 +11,7 @@
 
 * 1 Ativar o CloudTrail na conta princpal, onde sera centralizado os logs
 * 2 Atualizar a política no bucket de destino para conceder ao CloudTrail permissões entre contas.
-* 3 Ative o CloudTrail nas outras contas.
+* 3 Ative o CloudTrail nas outras contas "Secundarias
 
 *PASSO 1*
 
